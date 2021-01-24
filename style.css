@@ -1,0 +1,100 @@
+/* Style planning. 
+body should center main smack in the middle css grid styled but skewed offset with grid spaces
+  .
+. . .
+  .         Desktop 
+  
+        Main will have 4 child divs named scene 1-4 
+scene 1=reveal  (tv)
+scene 2=too Low (Burnette)
+Secne 3= ball
+Scene 4 = 8 too High (Blondie)     */
+
+body {
+display: flex;
+/* justify-content: space-around; */
+height: 100vh;
+width: 100vw;
+/* align-content: space-around; */
+} 
+#reset{
+  height: 5%;
+  width: 5%;
+}
+main{
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-areas: 
+  ".      s1      ."
+  "s2     s3     s4";
+grid-template-rows: 50% 50% ;
+grid-template-columns: 30% 30% 30%;
+gap: 2.5%;
+margin-right: auto;
+margin-left : auto;
+}
+
+.scene-1 ,.scene-2,  .scene-3, .scene-4{
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+
+  border-radius: 15%;
+}
+
+.scene-1{
+  grid-area: s1;
+  background-image:url(./images/tv.svg);
+  align-items: center;
+  justify-content: center;
+}
+
+.textsubmit{
+  margin-top: 15%;
+height: 25%;
+width: 30%;
+
+}
+
+#number{
+  height: 75%;
+  width: 100%;
+  font-size: 5rem;
+  text-align: center;
+  font-family: fantasy;
+}
+
+#guess{
+  width: 100%;
+  height: 25%;
+}
+.scene-2{
+  grid-area: s2;
+  background-image:url(./images/Brunett.svg);
+}
+.too-low{
+margin-top: 3.5%;
+margin-left: 58%;
+font-size: 2.5rem;
+}
+.scene-3{
+  grid-area: s3;
+  background-image:url(./images/Ball.svg);
+}
+.reveal{
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2.5rem;
+  margin-top: 0.5%;
+
+}
+.scene-4{
+  grid-area: s4;
+  background-image:url(./images/Blondie.svg); 
+}
+
+.too-high{
+  margin-left: 15%;
+  font-size: 2.5rem;
+}
